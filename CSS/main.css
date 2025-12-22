@@ -98,7 +98,7 @@ header nav ul li.btn a:hover {
     background: #c55703;
 }
 
-.hero {
+.hero.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,17 +159,35 @@ header nav ul li.btn a:hover {
     max-width: 600px;
 }
 
-.hero > img:last-of-type {
+#social {
     position: absolute;
     bottom: 0;
     right: 200px;
 }
 
-.hero.container {
+
+
+#left {
     
-  
-    margin-bottom: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 50px;
+    position: relative;
 }
 
 
+
+.main2 {
+    max-width: 600px;
+}
  
+.skill {
+    width: 100%;
+    max-width: 600px;
+}
+
+
+
+
+
