@@ -83,7 +83,8 @@ header nav ul li:not(.active):not(.btn) a::after {
 }
 
 header nav ul li:not(.active):not(.btn) a:hover::after {
-    transform: scaleX(1)}
+    transform: scaleX(1)
+}
 
 header nav ul li.btn a {
     background: #FD6F00;
@@ -107,38 +108,48 @@ header nav ul li.btn a:hover {
 }
 
 
-.hero--info{
+.hero--info {
     width: 650px;
     padding-top: 70px;
-} 
+}
 
-.hero--info h2{
-   font-size: 24px;
-   font-weight: 600;
-} 
+.hero--info h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.hero--info h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
 
 #h2nomer2 {
     color: #FD6F00;
-   font-size: 32px;
-   font-weight: 600;
-} 
+    font-size: 32px;
+    font-weight: 600;
+}
 
 .hero-title {
-  font-size: 76px;
-  font-weight: 700;
-  line-height: 1.1;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .hero-title span {
-  display: block;
-  margin-left: 170px;
+    display: block;
+    margin-left: 170px;
 }
 
-.hero--info p{
-   font-weight: 400;
-   line-height: 170%;
-   margin: 30px 0;
-} 
+.hero--info p {
+    font-weight: 400;
+    line-height: 170%;
+    margin: 30px 0;
+}
 
 .hero--info .btn {
     background: #FD6F00;
@@ -168,7 +179,7 @@ header nav ul li.btn a:hover {
 
 
 #left {
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,13 +192,88 @@ header nav ul li.btn a:hover {
 .main2 {
     max-width: 600px;
 }
- 
+
 .skill {
     width: 100%;
     max-width: 600px;
 }
 
+/* what i do  */
 
+.do {
+    padding-top: 50px;
 
+}
 
+.do .worke {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0px;
+    gap: 30px;
+}
 
+.bloke {
+    background: #edecec;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.project-otstup {
+    padding: 50px 0px;
+}
+
+.center {
+    text-align: center;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.fs-65 {
+    font-size: 65px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-24 {
+   font-size: 24px; 
+}
+
+.fs-21 {
+    font-size: 21px;
+}
+
+.fs-19 {
+    font-size: 19px;
+}
+
+.silka {
+    
+    display: block;
+    margin-left: auto;
+
+    background: #FD6F00;
+    color: aliceblue;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transform: all 500ms ease;
+    font-size: 18px;
+}
+
+.silka:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
