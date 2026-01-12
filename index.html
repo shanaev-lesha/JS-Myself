@@ -34,7 +34,7 @@
                 <button class="btn">Hire my</button>
             </div>
             <img class='main' src="img/avatar1.png" alt="">
-            <!-- <img id='social' src="img/social-networks.svg" alt=""> -->
+
         </div>
 
         <div id='left' class="container ">
@@ -85,7 +85,7 @@
 
         <div class="container do">
             <h1 class="center semiBold fs-65">My Projects</h1>
-            <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them!  </p>
+            <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them! </p>
             <button href="#" class="silka regular fs-24">All</button>
             <div class="worke">
                 <div class="">
@@ -108,6 +108,30 @@
 
 
     </div>
+
+    <div class="features">
+        <div class="container">
+            <h3 class="semiBold fs-65">Lets Design Together</h3>
+            <p class="regular fs-21">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus
+                in. Aliquet donec morbi convallis pretium</p>
+            <div class="cta-form">
+                <input type="email" id="emailField" placeholder="Enter Your Email">
+                <button onclick="checkEmail()">Contact Me</button>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value;
+            if (!email.includes ('@')) alert('Нет символа @');
+            else if (!email.includes ('.')) alert('Нет символа .');
+            else alert('Спасибо, ваш email отправлен')
+        }
+    </script>
 </body>
 
 </html>
