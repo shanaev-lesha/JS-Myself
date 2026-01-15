@@ -4,134 +4,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
     <title>Myself</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "QY5IvHDtKagfnSxO7SDo6"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
+
 <body>
-    <div class="wrapper">
-        <header class="container">
-            <img src="img/logo.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li class="btn"><a href="#">Downlaod CV</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <div class="hero container">
-            <div class="hero--info">
-                <h3>Hi I am </h3>
-                <h2 id="h2nomer2">Shanaev Aleksei</h2>
-                <h1 class="hero-title">FRONTEND <span> DEVELOPER</span> </h1>
-                <P class="regular fs-21">I can create websites and web applications of varying complexity for you. I
-                    approach my work with
-                    passion. </P>
-                <button class="btn">Hire my</button>
-            </div>
-            <img class='main' src="img/avatar1.png" alt="">
+    <header class="hederContainer">
+        <img src="img/logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#avatar2" class="nav-link">About me</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                <li class="btn"><a href="/rezume/Шанаев Алексей Сергеевич.pdf" download="Резюме Шанаева Алексея.pdf">Downlaod CV</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        </div>
+    <div class="otstupSverhu">
+        <div class="wrapper">
 
-        <div id='left' class="container ">
-            <img id='avatar2' class='main' src="img/avatar2.png" alt="">
-            <div id='div' class="hero--info">
-                <h1>About me</h1>
-                <P class="regular fs-21">I can create websites and web applications of varying complexity for you. I
-                    approach my work with
-                    passion. </P>
-                <img src="/img/haracteristic.png" alt="">
-            </div>
-        </div>
 
-        <div class="container do">
-            <h1 class="center semiBold fs-65">What I Do</h1>
-            <p class="center regular fs-21">This is piece I do,look this is perfect, enjoy my worke, welcome to the
-                viewing </p>
-            <div class="worke">
-                <div class="bloke">
-                    <img src="img/bloke1.png" alt="">
-                    <h2 class="semiBold fs-32">Business Card</h2>
-                    <p class="regular fs-19">A website that will serve as your business card, displaying all the
-                        necessary introductory information and contact details. </p>
+            <div id="home" class="hero container">
+                <div class="hero--info">
+                    <h3>Hi I am </h3>
+                    <h2 id="h2nomer2">Shanaev Aleksei</h2>
+                    <h1 class="hero-title">FRONTEND <span> DEVELOPER</span> </h1>
+                    <P class="regular fs-21">I can create websites and web applications of varying complexity for you. I
+                        approach my work with
+                        passion. </P>
+                    <button class="btn">Hire my</button>
                 </div>
-
-                <div class="bloke">
-                    <img src="img/bloke2.png" alt="">
-                    <h2 class="semiBold fs-32">Web Applications</h2>
-                    <p class="regular fs-19">A website that will serve as your business card, displaying all the
-                        necessary introductory information and contact details.</p>
-                </div>
-
-                <div class="bloke">
-                    <img src="img/bloke3.png" alt="">
-                    <h2 class="semiBold fs-32">Phone Support</h2>
-                    <p class="regular fs-19">A website that will serve as your business card, displaying all the
-                        necessary introductory information and contact details.</p>
-                </div>
-
-                <div class="bloke">
-                    <img src="img/bloke4.png" alt="">
-                    <h2 class="semiBold fs-32">AnimE</h2>
-                    <p class="regular fs-19">A website that will serve as your business card, displaying all the
-                        necessary introductory information and contact details.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="container do">
-            <h1 class="center semiBold fs-65">My Projects</h1>
-            <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them! </p>
-            <button href="#" class="silka regular fs-24">All</button>
-            <div class="worke">
-                <div class="">
-                    <img src="img/project1.png" alt="">
-                    <h2 class="project-otstup center semiBold fs-24">AirCalling Landing Page Design </h2>
-                </div>
-
-                <div class="">
-                    <img src="img/project2.png" alt="">
-                    <h2 class="project-otstup center semiBold fs-24">Business Landing Page Design </h2>
-                </div>
-
-                <div class="">
-                    <img src="img/project3.png" alt="">
-                    <h2 class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
-                </div>
+                <img class='main' src="img/avatar1.png" alt="">
 
             </div>
+
+            <div id='left' class="container ">
+                <img id='avatar2' class='main' src="img/avatar2.png" alt="">
+                <div id='div' class="hero--info">
+                    <h1>About me</h1>
+                    <P class="regular fs-21">I can create websites and web applications of varying complexity for you. I
+                        approach my work with
+                        passion. </P>
+                    <img src="/img/haracteristic.png" alt="">
+                </div>
+            </div>
+
+            <div class="container do">
+                <h1 class="center semiBold fs-65">What I Do</h1>
+                <p class="center regular fs-21">This is piece I do,look this is perfect, enjoy my worke, welcome to the
+                    viewing </p>
+                <div class="worke">
+                    <div class="bloke">
+                        <img src="img/bloke1.png" alt="">
+                        <h2 class="semiBold fs-32">Business Card</h2>
+                        <p class="regular fs-19">A website that will serve as your business card, displaying all the
+                            necessary introductory information and contact details. </p>
+                    </div>
+
+                    <div class="bloke">
+                        <img src="img/bloke2.png" alt="">
+                        <h2 class="semiBold fs-32">Web Applications</h2>
+                        <p class="regular fs-19">A website that will serve as your business card, displaying all the
+                            necessary introductory information and contact details.</p>
+                    </div>
+
+                    <div class="bloke">
+                        <img src="img/bloke3.png" alt="">
+                        <h2 class="semiBold fs-32">Phone Support</h2>
+                        <p class="regular fs-19">A website that will serve as your business card, displaying all the
+                            necessary introductory information and contact details.</p>
+                    </div>
+
+                    <div class="bloke">
+                        <img src="img/bloke4.png" alt="">
+                        <h2 class="semiBold fs-32">AnimE</h2>
+                        <p class="regular fs-19">A website that will serve as your business card, displaying all the
+                            necessary introductory information and contact details.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="container do">
+                <h1 class="center semiBold fs-65">My Projects</h1>
+                <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them! </p>
+                <button href="#" class="silka regular fs-24">All</button>
+                <div class="worke">
+                    <div class="">
+                        <img src="img/project1.png" alt="">
+                        <h2 class="project-otstup center semiBold fs-24">AirCalling Landing Page Design </h2>
+                    </div>
+
+                    <div class="">
+                        <img src="img/project2.png" alt="">
+                        <h2 class="project-otstup center semiBold fs-24">Business Landing Page Design </h2>
+                    </div>
+
+                    <div class="">
+                        <img src="img/project3.png" alt="">
+                        <h2 class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
+        <div class="features">
+            <div class="container">
+                <h3 class="semiBold fs-65">Lets Design Together</h3>
+                <p class="regular fs-21">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus
+                    netus
+                    in. Aliquet donec morbi convallis pretium</p>
+                <div class="cta-form">
+                    <input type="email" id="emailField" placeholder="Enter Your Email">
+                    <button onclick="checkEmail()">Contact Me</button>
+                </div>
+            </div>
+        </div>
 
+        <footer>
+            <div class="blocks container">
+                <div>
+                    <img src="img/logo.png" alt="" class="logo">
+                    <p class="regular fs-19">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+                        lectus
+                        netus
+                        in. Aliquet donec morbi convallis pretium</p>
+                </div>
+                <div>
+                    <ul class="regular fs-19">
+                        <li>Home</li>
+                        <li> About Me</li>
+                        <li> Services</li>
+                        <li> Projects</li>
+                        <li> Testimonials</li>
+                        <li> Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="regular fs-21">Contact us</h4>
+                    <p class="regular fs-19">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+                        lectus
+                        netus
+                        in. Aliquet donec morbi convallis pretium</p>
+                    <p class="regular fs-19">+995 599 904 286</p>
+                </div>
+            </div>
+            <div class="black">
+                <p>© 2026 made by <span class="oreng">Alexey</span> with <sapn class="oreng"> ♥</span></p>
+            </div>
+
+        </footer>
     </div>
-
-    <div class="features">
-        <div class="container">
-            <h3 class="semiBold fs-65">Lets Design Together</h3>
-            <p class="regular fs-21">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus
-                in. Aliquet donec morbi convallis pretium</p>
-            <div class="cta-form">
-                <input type="email" id="emailField" placeholder="Enter Your Email">
-                <button onclick="checkEmail()">Contact Me</button>
-            </div>
-        </div>
-    </div>
-
-
-   
 
     <script>
         function checkEmail() {
             let email = document.querySelector('#emailField').value;
-            if (!email.includes ('@')) alert('Нет символа @');
-            else if (!email.includes ('.')) alert('Нет символа .');
+            if (!email.includes('@')) alert('Нет символа @');
+            else if (!email.includes('.')) alert('Нет символа .');
             else alert('Спасибо, ваш email отправлен')
         }
     </script>
+
+    <script>
+        const links = document.querySelectorAll('.nav-link[href^="#"]');
+        const sections = document.querySelectorAll('[id]');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+
+                    links.forEach(link => {
+                        link.classList.toggle(
+                            'active',
+                            link.getAttribute('href') === `#${id}`
+                        );
+                    });
+                }
+            });
+        }, {
+            threshold: 0.6
+        });
+
+        links.forEach(link => {
+            const id = link.getAttribute('href').slice(1);
+            const section = document.getElementById(id);
+            if (section) observer.observe(section);
+        });
+    </script>
+
+
 </body>
 
 </html>

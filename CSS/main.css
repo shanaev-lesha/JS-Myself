@@ -5,9 +5,15 @@
     padding: 0;
 }
 
+
 body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
+   
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 a {
@@ -20,7 +26,12 @@ img {
 }
 
 .wrapper {
-    background: 878787;
+    background: #ffffff;
+    
+}
+
+.otstupSverhu {
+padding-top: 90px;
 }
 
 .container {
@@ -28,16 +39,61 @@ img {
     margin: 0 auto;
 }
 
-header {
-    padding: 50px 0;
+.hederContainer {
+    height: 56px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-header .logo {
-    width: 80px;
-    height: 70px;
+header {
+   background: #ffffff;
+  position: fixed;
+  z-index: 1000;
+}
+
+
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 4px;
+    background: #FD6F00;
+    transition: width .2s;
+    border-radius: 10px;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+header .logo
+{
+    width: 50px;
+    height: 45px;
+}
+
+header img {
+    padding-top: 5px;
+    padding-left: 50px;
 }
 
 header nav {
+    padding-top: 16px;
+    padding-right: 30px;
     float: right;
     width: 50%;
 }
@@ -56,7 +112,7 @@ header nav ul li a {
     color: #000000;
 }
 
-header nav ul li.active::after {
+/* header nav ul li.active::after {
     content: '';
     display: block;
     width: 100%;
@@ -84,7 +140,7 @@ header nav ul li:not(.active):not(.btn) a::after {
 
 header nav ul li:not(.active):not(.btn) a:hover::after {
     transform: scaleX(1)
-}
+} */
 
 header nav ul li.btn a {
     background: #FD6F00;
@@ -98,6 +154,8 @@ header nav ul li.btn a {
 header nav ul li.btn a:hover {
     background: #e86f00;
 }
+
+
 
 .hero.container {
     display: flex;
@@ -176,7 +234,9 @@ header nav ul li.btn a:hover {
     right: 200px;
 }
 
-
+#avatar2 {
+    padding-top: 100px;
+}
 
 #left {
 
@@ -337,4 +397,50 @@ margin-right: auto;
 
 .cta-form button:hover {
   background: #e86f00;
+}
+
+
+/* Footer */
+
+footer {
+    background: #F8F8F8;
+    
+}
+
+footer .blocks {
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 500px;
+    margin: 25px 0;
+}
+
+footer .blocks ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer .logo
+{
+    width: 60px;
+    height: 55px;
+}
+
+footer .black {
+    padding: 20px 0;
+    text-align: center;
+    background: #545454;
+    color: #ddd;
+}
+
+.oreng {
+    color: #e86f00;
 }
