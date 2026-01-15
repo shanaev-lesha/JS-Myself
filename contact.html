@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <title>Myself</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<script>
+    (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "QY5IvHDtKagfnSxO7SDo6"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+</script>
+
+<body>
+
+    <header class="hederContainer">
+        <img src="img/logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/index.html#avatar2">About me</a></li>
+                <li><a href="/index.html#projects">Projects</a></li>
+                <li><a href="#" class="nav-link active">Contact</a></li>
+                <li class="btn"><a href="#">Downlaod CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+
+        <footer>
+            <div class="blocks container">
+                <div>
+                    <img src="img/logo.png" alt="" class="logo">
+                    <p class="regular fs-19">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+                        lectus
+                        netus
+                        in. Aliquet donec morbi convallis pretium</p>
+                </div>
+                <div>
+                    <ul class="regular fs-19">
+                        <li>Home</li>
+                        <li> About Me</li>
+                        <li> Services</li>
+                        <li> Projects</li>
+                        <li> Testimonials</li>
+                        <li> Contact</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="regular fs-21">Contact us</h4>
+                    <p class="regular fs-19">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh
+                        lectus
+                        netus
+                        in. Aliquet donec morbi convallis pretium</p>
+                    <p class="regular fs-19">+995 599 904 286</p>
+                </div>
+            </div>
+            <div class="black">
+                <p>© 2026 made by <span class="oreng">Alexey</span> with <sapn class="oreng"> ♥</span></p>
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value;
+            if (!email.includes('@')) alert('Нет символа @');
+            else if (!email.includes('.')) alert('Нет символа .');
+            else alert('Спасибо, ваш email отправлен')
+        }
+    </script>
+</body>
+
+</html>
