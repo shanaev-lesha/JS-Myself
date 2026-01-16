@@ -15,6 +15,8 @@
 
 <body>
 
+
+
     <header class="hederContainer">
         <img src="img/logo.png" alt="" class="logo">
         <nav>
@@ -23,11 +25,45 @@
                 <li><a href="#avatar2" class="nav-link">About me</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="/contact.html" class="nav-link">Contact</a></li>
-                <li class="btn"><a href="/rezume/Шанаев Алексей Сергеевич.pdf"
-                        download="Резюме Шанаева Алексея.pdf">Downlaod CV</a></li>
+                <li class="btn" id="openModal"><a href="#">Downlaod CV</a></li>
+
+                
+
+
+
             </ul>
         </nav>
     </header>
+
+<div class="modal" id="modal">
+                    <div class="modal-inner">
+                        <h2 class="otstupSnizu2 semiBold">Resume will be downloaded to your device</h2>
+                        <p class="otstupSnizu regular fs-19">
+                            Want to download resume?
+                        </p>
+                        <ul class="felxPopup">
+                        <li class="btn closeModal otstupRite flexPopupLi"><a href="#">No</a></li>
+                        <li class="btn closeModal flexPopupLi"><a href="/rezume/Шанаев Алексей Сергеевич.pdf" download="Резюме Шанаева Алексея.pdf" >Yes</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+    <script>
+        const openBtn = document.getElementById("openModal");
+        const closeBtns = document.querySelectorAll(".closeModal");
+        const modal = document.getElementById("modal");
+
+        openBtn.addEventListener("click", () => {
+            modal.classList.add("open");
+        });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                modal.classList.remove("open");
+            });
+        });
+    </script>
+
 
     <div class="otstupSverhu">
         <div class="wrapper">
@@ -41,7 +77,7 @@
                     <P class="regular fs-21">I can create websites and web applications of varying complexity for you. I
                         approach my work with
                         passion. </P>
-                    <button class="btn">Hire my</button>
+                    <a class="silka" href="#contactMe">Hire my</a>
                 </div>
                 <img class='main' src="img/avatar1.png" alt="">
 
@@ -96,7 +132,7 @@
             <div id="projects" class="container do">
                 <h1 class="center semiBold fs-65">My Projects</h1>
                 <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them! </p>
-                <button href="#" class="silka regular fs-24">All</button>
+                <a class="silka regular fs-24" href="#">All</a>
                 <div class="worke">
                     <div class="">
                         <img src="img/project1.png" alt="">
@@ -110,16 +146,16 @@
 
                     <div class="">
                         <img src="img/project3.png" alt="">
-                        <h2 class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
+                        <h2  class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <div class="features">
+        <div class="features" id="contactMe">
             <div class="container">
-                <h3 class="semiBold fs-65">Lets Design Together</h3>
+                <h3 class="semiBold fs-65" >Lets Design Together</h3>
                 <p class="regular fs-21">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus
                     netus
                     in. Aliquet donec morbi convallis pretium</p>

@@ -21,6 +21,71 @@ a {
 
 }
 
+/* popup  */
+
+.modal {
+ background-color: rgba(0 , 0, 0, 0.3);
+ opacity: 0;
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ transition: all 0.3s ease-in-out;
+ z-index: -1;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.otstupSnizu {
+    margin-bottom: 30px;
+}
+
+.otstupSnizu2 {
+    margin-bottom: 20px;
+}
+
+.otstupRite {
+    margin-right: 10px;
+}
+
+.modal.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.flexPopup {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexPopupLi {
+    display: inline-block;
+}
+
+.modal-inner {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+}
+
+.buttonPopup {
+     background: #FD6F00;
+    padding: 9px 17px;
+    border-radius: 20px;
+    color: aliceblue;
+    transition: all 500ms ease;
+}
+
+/* popup */
+
+
 img {
     max-width: 100%;
 }
@@ -48,7 +113,7 @@ padding-top: 90px;
 header {
    background: #ffffff;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
 }
 
 
@@ -142,7 +207,7 @@ header nav ul li:not(.active):not(.btn) a:hover::after {
     transform: scaleX(1)
 } */
 
-header nav ul li.btn a {
+.btn a {
     background: #FD6F00;
     padding: 9px 17px;
     border-radius: 5px;
@@ -151,7 +216,7 @@ header nav ul li.btn a {
 
 }
 
-header nav ul li.btn a:hover {
+.btn a:hover {
     background: #e86f00;
 }
 
@@ -322,7 +387,7 @@ header nav ul li.btn a:hover {
 
 .silka {
     
-    display: block;
+    display: inline-block;
     margin-left: auto;
 
     background: #FD6F00;
@@ -368,6 +433,7 @@ margin-right: auto;
   gap: 12px;
   flex-wrap: wrap;
   padding-bottom: 40px;
+  
 }
 
 .cta-form input {
@@ -394,6 +460,7 @@ margin-right: auto;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 500ms ease;
 }
 
 .cta-form button:hover {
