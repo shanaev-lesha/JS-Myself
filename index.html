@@ -25,45 +25,10 @@
                 <li><a href="#avatar2" class="nav-link">About me</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="/contact.html" class="nav-link">Contact</a></li>
-                <li class="btn" id="openModal"><a href="#">Downlaod CV</a></li>
-
-                
-
-
-
+                <li class="btn" id="openAll"><a href="#">Downlaod CV</a></li>
             </ul>
         </nav>
     </header>
-
-<div class="modal" id="modal">
-                    <div class="modal-inner">
-                        <h2 class="otstupSnizu2 semiBold">Resume will be downloaded to your device</h2>
-                        <p class="otstupSnizu regular fs-19">
-                            Want to download resume?
-                        </p>
-                        <ul class="felxPopup">
-                        <li class="btn closeModal otstupRite flexPopupLi"><a href="#">No</a></li>
-                        <li class="btn closeModal flexPopupLi"><a href="/rezume/Шанаев Алексей Сергеевич.pdf" download="Резюме Шанаева Алексея.pdf" >Yes</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-    <script>
-        const openBtn = document.getElementById("openModal");
-        const closeBtns = document.querySelectorAll(".closeModal");
-        const modal = document.getElementById("modal");
-
-        openBtn.addEventListener("click", () => {
-            modal.classList.add("open");
-        });
-
-        closeBtns.forEach(btn => {
-            btn.addEventListener("click", () => {
-                modal.classList.remove("open");
-            });
-        });
-    </script>
-
 
     <div class="otstupSverhu">
         <div class="wrapper">
@@ -132,7 +97,7 @@
             <div id="projects" class="container do">
                 <h1 class="center semiBold fs-65">My Projects</h1>
                 <p class="center regular fs-21">Here I present all my projects to you. Enjoy viewing them! </p>
-                <a class="silka regular fs-24" href="#">All</a>
+                <a id="openAllProlects" class="silka regular fs-24">All</a>
                 <div class="worke">
                     <div class="">
                         <img src="img/project1.png" alt="">
@@ -146,16 +111,18 @@
 
                     <div class="">
                         <img src="img/project3.png" alt="">
-                        <h2  class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
+                        <h2 class="project-otstup center semiBold fs-24">Ecom Web Page Design </h2>
                     </div>
 
                 </div>
             </div>
         </div>
 
+
+
         <div class="features" id="contactMe">
             <div class="container">
-                <h3 class="semiBold fs-65" >Lets Design Together</h3>
+                <h3 class="semiBold fs-65">Lets Design Together</h3>
                 <p class="regular fs-21">Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus
                     netus
                     in. Aliquet donec morbi convallis pretium</p>
@@ -199,12 +166,93 @@
         </footer>
     </div>
 
-    <script>
+    <div class="modal" id="modalAll">
+        <div class="modal-inner">
+            <h2 class="otstupSnizu2 semiBold">Resume will be downloaded to your device</h2>
+            <p class="otstupSnizu regular fs-19">
+                Want to download resume?
+            </p>
+            <ul class="felxPopup">
+                <li class="btn closeModal otstupRite flexPopupLi"><a href="#">No</a></li>
+                <li class="btn  flexPopupLi"><a class="closeModal" href="/rezume/Шанаев Алексей Сергеевич.pdf"
+                        download="Резюме Шанаева Алексея.pdf" class="closeModal">Yes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="allProlects">
+        <div class="modal-inner">
+            <h2 class="otstupSnizu2 semiBold">These are all projects</h2>
+            <p class="otstupSnizu regular fs-19">
+                So far, all projects are displayed on the screen
+            </p>
+            <ul class="felxPopup">
+                <li class="btn closeModal otstupRite flexPopupLi"><a href="#projects">Ok</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modalNoAt">
+        <div class="modal-inner">
+            <h2 class="otstupSnizu2 semiBold">Error</h2>
+            <p class="otstupSnizu regular fs-19">
+                You forgot to indicate <span class="oreng">@</span>
+            </p>
+            <ul class="felxPopup">
+                <li class="btn closeModal otstupRite flexPopupLi"><a href="#contactMe">Ok</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modalNoDot">
+        <div class="modal-inner">
+            <h2 class="otstupSnizu2 semiBold">Error</h2>
+            <p class="otstupSnizu regular fs-19">
+                You forgot to indicate <span class="oreng">.</span>
+            </p>
+            <ul class="felxPopup">
+                <li class="btn closeModal otstupRite flexPopupLi"><a href="#contactMe">Ok</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="modalOk">
+        <div class="modal-inner">
+            <h2 class="otstupSnizu2 semiBold">Sorry</h2>
+            <p class="otstupSnizu regular fs-19">
+                The database is not connected, this function is not supported yet, <span class="oreng">for communication
+                    please write to messengers or call</span>
+            </p>
+            <ul class="felxPopup">
+                <li class="btn closeModal otstupRite flexPopupLi"><a href="#contactMe">Ok</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <script>
         function checkEmail() {
             let email = document.querySelector('#emailField').value;
             if (!email.includes('@')) alert('Нет символа @');
             else if (!email.includes('.')) alert('Нет символа .');
             else alert('Спасибо, ваш email отправлен')
+        }
+    </script> -->
+
+    <script>
+        function checkEmail() {
+            const email = document.querySelector('#emailField').value;
+
+            if (!email.includes('@')) {
+                document.querySelector('#modalNoAt').classList.add('open');
+                return;
+            }
+
+            if (!email.includes('.')) {
+                document.querySelector('#modalNoDot').classList.add('open');
+                return;
+            }
+
+            document.querySelector('#modalOk').classList.add('open');
         }
     </script>
 
@@ -236,6 +284,36 @@
         });
     </script>
 
+    <script>
+        function initModal(openSelector, modalSelector, closeSelector) {
+    const modal = document.querySelector(modalSelector);
+    if (!modal) return;
+
+    const closeBtns = modal.querySelectorAll(closeSelector);
+
+    if (openSelector) {
+        const openBtn = document.querySelector(openSelector);
+        if (openBtn) {
+            openBtn.addEventListener("click", () => {
+                modal.classList.add("open");
+            });
+        }
+    }
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            modal.classList.remove("open");
+        });
+    });
+}
+
+
+        initModal("#openAll", "#modalAll", ".closeModal");
+        initModal("#openAllProlects", "#allProlects", ".closeModal");
+        initModal(null, "#modalNoAt", ".closeModal");
+        initModal(null, "#modalNoDot", ".closeModal");
+        initModal(null, "#modalOk", ".closeModal");
+    </script>
 
 </body>
 

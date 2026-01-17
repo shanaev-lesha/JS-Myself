@@ -369,6 +369,10 @@ header nav ul li:not(.active):not(.btn) a:hover::after {
     font-size: 65px;
 }
 
+.fs-50 {
+    font-size: 50px;
+}
+
 .fs-32 {
     font-size: 32px;
 }
