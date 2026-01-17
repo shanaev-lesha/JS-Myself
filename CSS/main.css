@@ -524,3 +524,28 @@ footer .black {
 .basementLink:hover {
     color: #FD6F00;
 }
+
+
+
+.phone-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    transition: transform .15s, opacity .15s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
